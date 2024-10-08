@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Palanquin:wght@100;200;300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: rgb(0, 0, 0);
+  width: 100dvw;
+  overflow-x: hidden;
+  height: 100%;
+  background: #e6e5e5;
+  border-color: #3b3b3b;
+  user-select: none;
+  scroll-behavior: smooth;
+}
+
+.nav-links li {
+  list-style: none;       /* Entfernt die Standard-Punktmarkierungen */
+  display: inline-block;  /* Macht die Listenelemente inline, damit sie nebeneinander angezeigt werden */
+  cursor: pointer;        /* Ändert den Mauszeiger zu einer Hand, wenn er über die Links fährt */
+  position: relative;     /* Erforderlich für das Pseudoelement ::after */
+}
+
+.nav-links li::after {
+  content: '';               /* Leeres Pseudoelement erstellen */
+  position: absolute;        /* Absolut positioniert, relativ zu li */
+  width: 0;                  /* Initiale Breite der Linie ist 0 */
+  height: 2px;               /* Höhe der Unterstreichung */
+  background-color: black;   /* Farbe der Unterstreichung */
+  bottom: -2px;              /* Position der Linie direkt unter dem Text */
+  left: 0;                   /* Beginnt am linken Rand des Textes */
+  transition: width 0.3s ease;  /* Übergangseffekt für die Breite */
+}
+
+.nav-links li:hover::after {
+  width: 100%;               /* Breite der Linie bei Hover wird auf 100% gesetzt */
+}
+.slider-image {
+  transform: scale(1);
+  transition: transform 1s ease-in-out;
+}
+
+.slider-image:hover {
+  transform: scale(1.05);
+}
+
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  animation: marquee 20s linear infinite;
+}
+
+.btn {
+  background-color: #b59762;
+  color: #f3f3f3;
+  padding:10px 16px ;
+  border-radius: 8px;
+  transition: all ease .2s;
+}
+
+.btn:hover {
+  scale: (1.1);
+}
+
+@layer utilities {
+  .nav-links {
+    @apply hidden md:flex list-none gap-x-5 transition
+  }
+
+
+  .btn:hover{
+    @apply scale-105 
+  }
+}

@@ -1,0 +1,46 @@
+import React, { useState, useEffect } from 'react';
+import { SliderConstants } from '../constants';
+
+const ImageSlider = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  // Automatischer Bildwechsel nach 10 Sekunden
+  useEffect(() => {
+    const interval = setTimeout(() => {
+      nextSlide();
+    }, 5000); // 10 Sekunden
+
+    return () => clearTimeout(interval); // Bereinigt den Timeout, wenn die Komponente neu gerendert wird
+  }, [currentIndex]);
+
+  const prevSlide = () => {
+    const isFirstSlide = currentIndex === 0;
+    const newIndex = isFirstSlide ? SliderConstants.length - 1 : currentIndex - 1;
+    setCurrentIndex(newIndex);
+  };
+
+  const nextSlide = () => {
+    const isLastSlide = currentIndex === SliderConstants.length - 1;
+    const newIndex = isLastSlide ? 0 : currentIndex + 1;
+    setCurrentIndex(newIndex);
+  };
+
+  return (
+    <div className="bg-bg w-full h-[90vh] flex justify-center items-center relative">
+      <div className="w-[100%]  h-full overflow-hidden relative"> {/* 80% Breite */}
+        <img
+          src={SliderConstants[currentIndex].img}
+          alt={SliderConstants[currentIndex].text}
+          className="w-full  h-full object-cover brightness-50 transition duration-1000 ease-in-out" // Weicher Übergang
+        />
+        <div className="absolute top-20 left-1/4 transform -translate-x-1/2 text-white text-center p-4"> {/* Zentrierter Text */}
+          <p className="font-montserrat text-lg md:text-[30px] font-semibold drop-shadow-lg"> {/* Größere Schrift und Schatten für bessere Lesbarkeit */}
+            {SliderConstants[currentIndex].text}
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ImageSlider;
