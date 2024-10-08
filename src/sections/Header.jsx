@@ -32,7 +32,7 @@ const Header = () => {
         </div>
         {/* Mobile Hamburger Menu */}
         <div className="flex gap-x-5 items-center">
-          <a href="/" className="btn btn-hover text-[10px] md:text-[16px]">
+          <a href="https://www.fresha.com/de/a/studio-28-augsburg-augsburg-hauptbahnhof-oeoobtnd/all-offer?menu=true&pId=1370719" className="btn btn-hover text-[10px] md:text-[16px]">
             Termin Buchen
           </a>
           <div className="text-2xl hidden max-md:block">|</div>
