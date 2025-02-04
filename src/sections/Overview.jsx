@@ -12,8 +12,8 @@ const Overview = () => {
       <div className="flex flex-wrap justify-center gap-8">
         {services.map((service, index) => (
           <a
-            href={service.link}
-            key={index}
+            href={service.link} // Link hier dynamisch aus dem services Array beziehen
+            key={index} // Hier wird index verwendet, nicht services.link
             className="relative group w-40 h-48 rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105 hover:rotate-1 hover:shadow-2xl"
           >
             <div className="absolute inset-0 bg-gradient-to-t from-gray-800 to-transparent opacity-75 group-hover:opacity-50 transition-opacity"></div>
@@ -28,9 +28,8 @@ const Overview = () => {
           </a>
         ))}
       </div>
-      <hr  className='bg-gold border-gold mt-16 h-1'/>
+      <hr className='bg-gold border-gold mt-16 h-1' />
     </div>
-
   );
 };
 

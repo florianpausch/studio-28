@@ -7,11 +7,11 @@ export const SliderConstants = [
 ];
 
 export const services = [
-  { name: "Haarschnitt", image: Ov1Img, link: "haarschnitt.html" }, 
-  { name: "Färben", image: Ov2Img, link: "faerben.html" }, 
-  { name: "Styling", image: Ov3Img, link: "styling.html" }, 
-  { name: "Bartpflege", image: Ov4Img, link: "bartpflege.html" }, 
-  { name: "Haarverlängerung", image: Ov5Img, link: "haarverlaengerung.html" }
+  { name: "Haarschnitt", image: Ov1Img, link: "../unterseiten/haarschnitt.html" },
+  { name: "Färben", image: Ov2Img, link: "../unterseiten/faerben.html" }, 
+  { name: "Styling", image: Ov3Img, link: "../unterseiten/styling.html" }, 
+  { name: "Bartpflege", image: Ov4Img, link: "../unterseiten/bartpflege.html" }, 
+  { name: "Haarverlängerung", image: Ov5Img, link: "../unterseiten/haarverlaengerung.html" }
 ];
 
 export const reasons = [

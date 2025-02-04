@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haarverlängerung | Friseursalon</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #b59762;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #b59762;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .card {
+            background-color: #f9f9f9;
+            border: 1px solid #b59762;
+            border-radius: 8px;
+            margin: 15px;
+            padding: 10px;
+            text-align: center;
+            width: 300px;
+            transition: transform 0.3s;
+        }
+
+        .card img {
+            border-radius: 8px;
+            width: 100%;
+            height: auto;
+        }
+
+        .card h3 {
+            color: #b59762;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #b59762;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Willkommen in unserem Friseursalon</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Startseite</a></li>
+                <li><a href="haarschnitt.html">Haarschnitte</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Haarverlängerung</h2>
+        <div class="gallery">
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200?text=Haarverlängerung" alt="Haarverlängerung">
+                <h3>Traumhafte Länge</h3>
+                <p>Verlängern Sie Ihre Haare für einen glamourösen Look.</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200?text=Echthaar"></h3>
+                <h3>Echthaar Extensions</h3>
+                <p>Natürliches Aussehen mit hochwertigen Echthaar-Extensions.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Friseursalon. Alle Rechte vorbehalten.</p>
+    </footer>
+</body>
+</html>
